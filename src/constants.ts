@@ -2,11 +2,12 @@
  * @overview Contains constants & constant type
  */
 export class Constant {
-  public constant: string;
+  public constant: any;
 
-  constructor(constant: string) {
+  constructor(constant: any) {
     this.constant = constant;
   }
 }
 
 export const buffer = new Constant("buffer");
+export const bufferEncoder = new Constant((contents: any) => new ArrayBuffer(contents));
